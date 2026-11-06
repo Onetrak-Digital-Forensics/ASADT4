@@ -1,0 +1,16 @@
+[ScriptInfo]
+script_id = 'massdns'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+massdns_enable = true
+
+[Defaults]
+domain_file = '' # Required file with one query name per line.
+resolvers = '' # Required file with one DNS resolver address per line.
+record_type = 'A' # A, AAAA, CNAME, MX, NS, PTR, or TXT.
+concurrency = 0 # Concurrent lookups, 1–1000000. Zero uses the tool default.
+
+[ScriptOutput]
+# Filename inside the selected output directory.
+massdns_default_output_filename = 'massdns.txt'

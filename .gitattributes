@@ -1,0 +1,3 @@
+# Python launchers and project text use LF on Linux and Windows.
+* text=auto eol=lf
+*.png binary

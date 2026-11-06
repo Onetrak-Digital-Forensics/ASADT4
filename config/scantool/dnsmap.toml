@@ -1,0 +1,15 @@
+[ScriptInfo]
+script_id = 'dnsmap'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+dnsmap_enable = true
+
+[Defaults]
+domain = '' # Domain to enumerate, for example example.org.
+wordlist = '' # Optional path to a wordlist. Empty uses the built-in list.
+delay_ms = 0 # Maximum random delay, 1–300000 ms. Zero uses the tool default.
+
+[ScriptOutput]
+# Filename inside the selected output directory.
+dnsmap_default_output_filename = 'dnsmap.txt'

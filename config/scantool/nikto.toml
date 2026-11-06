@@ -1,0 +1,31 @@
+[ScriptInfo]
+# ASADT module metadata.
+script_id = 'nikto'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+# Boolean switches accept true/false and the older strings 'True'/'False'.
+nikto_enable = true          # Allow this tool to run.
+nikto_nointeractive = false  # Set true to pass -nointeractive during scans.
+# -Display codes can be combined, e.g. 'EP' for HTTP errors and progress.
+# 1 redirects, 2 cookies, 3 OK responses, 4 auth URLs, D debug, E errors,
+# P progress, S scrub IPs/hostnames, V verbose.
+nikto_displaytype = 'V'
+# Choose 'current' if nikto -Help lists -nocookies (Kali 2.6.x).
+# Choose 'legacy' if it lists -usecookies. Older ASADT files without this key use 'legacy'.
+# The Use Cookies checkbox starts checked for current and unchecked for legacy.
+nikto_cli_profile = 'current'
+
+[Defaults]
+# Defaults for GUI and terminal runs. The form can override these for one run.
+follow_redirects = false     # Follow HTTP redirects (-followredirects).
+request_timeout_seconds = 10 # 1–100 seconds per request (-timeout).
+pause_seconds = 0            # 0–100 seconds between tests (-Pause). Zero disables the pause.
+max_time_seconds = 0  # 0–604800 seconds per host (-maxtime). Zero uses Nikto timing. Example: 900.
+root_path = ''        # Path prefix for every request (-root), e.g. '/portal'. Empty uses the target as entered.
+
+[ScriptOutput]
+# File report formats: txt, csv, json, htm, sql, xml. Older builds can also use nbe with the legacy profile.
+nikto_default_output_format = 'txt'
+# Enter a filename without a directory. Match the extension to the format, e.g. 'audit.json' for json.
+nikto_default_output_filename = 'nikto_output.txt'

@@ -1,0 +1,16 @@
+[ScriptInfo]
+script_id = 'wpscan'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+wpscan_enable = true
+
+[Defaults]
+url = '' # WordPress URL, for example https://blog.example.org.
+detection_mode = 'mixed' # mixed, passive, or aggressive.
+enumerate = '' # Optional comma-separated WPScan codes, for example vp,vt,u.
+max_threads = 0 # 1–256 workers, or 0 for the tool default.
+
+[ScriptOutput]
+# Filename inside the selected output directory.
+wpscan_default_output_filename = 'wpscan.json'

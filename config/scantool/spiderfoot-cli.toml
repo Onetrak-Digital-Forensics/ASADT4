@@ -1,0 +1,17 @@
+[ScriptInfo]
+script_id = 'spiderfoot-cli'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+spiderfoot-cli_enable = true
+
+[Defaults]
+server_url = 'http://127.0.0.1:5001' # URL of the running SpiderFoot server.
+commands_file = '' # SpiderFoot CLI command file. Empty starts an interactive session.
+username = '' # Optional server username.
+password_file = '' # Optional path to a file containing the server password.
+no_history = true # Disable the client's local command-history file.
+
+[ScriptOutput]
+# Filename inside the selected output directory.
+spiderfoot-cli_default_output_filename = 'spiderfoot-cli.txt'

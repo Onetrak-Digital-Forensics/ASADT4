@@ -1,0 +1,36 @@
+[ScriptInfo]
+# ASADT module metadata.
+script_id = 'nmap'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+# Boolean switches accept true/false and the older strings 'True'/'False'.
+nmap_enable = true                    # Allow this tool to run.
+nmap_updatensedb = false              # Run --script-updatedb first. Requires a writable script database.
+nmap_nsedebug_enable = false           # Print NSE traffic with --script-trace when a script is selected.
+nmap_nsescriptscan_enable = true      # Allow NSE scripts and the optional arguments file.
+# With NSE enabled, a blank script field selects the expression 'not intrusive'.
+nmap_assumesudoperms_enable = true    # Pass --privileged. Set false for --unprivileged. Run with the actual permissions needed.
+
+[Defaults]
+# Defaults for GUI and terminal runs. The form can override these for one run.
+# Scan methods: TCP Syn Scan, Connect() Scan, ACK Scan, Window Scan, Maimon Scan,
+# UDP Scan, TCP Null Scan, FIN Scan, Xmas Scan.
+scan_method = 'TCP Syn Scan'
+ipv6 = false           # Use IPv6 for both the main scan and the optional traceroute.
+traceroute = false     # Run a separate traceroute before the main scan.
+os_detection = false   # Request OS detection (-O).
+timing_preset = 3      # 0–5, from slowest (-T0) to fastest (-T5).
+version_intensity = 5  # 0–9 for service version detection, or -1 to disable it.
+# A zero timeout or rate leaves that limit to Nmap.
+host_timeout_minutes = 10  # 0–10080 whole minutes per host. Example: 15 passes --host-timeout 15m.
+max_rate = 0              # 0–1000000 whole packets/second across host discovery and port scans. Example: 100.
+# Each Nmap invocation uses these limits, including the separate traceroute when selected.
+
+[ScriptOutput]
+# Choose oN (text), oX (XML), oG (grepable), oS (stylized text), or oA (three reports).
+# ASADT adds the leading dash. The GUI supplies the directory.
+# Use a plain report filename. Nmap expands percent signs, so ASADT rejects % in the name or directory.
+nmap_fullscan_output_format = 'oN'
+nmap_fullscan_output_filename = 'nmap-fullscan_output.txt'
+# With oA use a base name, e.g. 'inventory' produces inventory.nmap, inventory.xml and inventory.gnmap.

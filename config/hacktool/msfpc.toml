@@ -1,0 +1,11 @@
+[ScriptInfo]
+# ASADT module metadata.
+script_id = 'msfpc'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+# Boolean switches accept true/false and the older strings 'True'/'False'.
+msfpc_enable = true       # Allow this tool to run.
+msfpc_verboseout = false  # Set true to pass the verbose argument in single, loop and batch modes.
+# Choose the output directory in the form. MSFPC names the files.
+# Loop uses the connection address and optional port. Batch also uses the console selection.

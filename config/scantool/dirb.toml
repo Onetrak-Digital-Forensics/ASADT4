@@ -1,0 +1,17 @@
+[ScriptInfo]
+script_id = 'dirb'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+dirb_enable = true
+
+[Defaults]
+url = '' # Base URL, for example https://example.org/.
+wordlist = '' # Optional path to a wordlist. Empty uses the packaged list.
+extensions = '' # Optional comma-separated suffixes, for example .php,.html.
+no_recursion = false # Set true to scan only the starting directory.
+delay_ms = 0 # Milliseconds between requests, 0–300000. Zero uses the tool default.
+
+[ScriptOutput]
+# Filename inside the selected output directory.
+dirb_default_output_filename = 'dirb.txt'

@@ -1,0 +1,14 @@
+[ScriptInfo]
+script_id = 'assetfinder'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+assetfinder_enable = true
+
+[Defaults]
+domain = '' # Domain to search, for example example.org.
+subs_only = true # Limit results to subdomains of the supplied domain.
+
+[ScriptOutput]
+# Filename inside the selected output directory.
+assetfinder_default_output_filename = 'assetfinder.txt'

@@ -1,0 +1,8 @@
+[script_data]
+script_version = 'v4.0.1'
+script_authors = "secops@odfsec.org(✓)"
+script_repo = 'https://github.com/Onetrak-Digital-Forensics/ASADT4/archive/refs/tags'
+script_master = 'https://raw.githubusercontent.com/Onetrak-Digital-Forensics/ASADT4/master/config/scriptinfo.toml'
+
+[APT_DEP]
+dependency_list = ['nmap', 'nikto', 'dnsrecon', 'msfpc', 'wpscan', 'assetfinder', 'dirb', 'dnsmap', 'massdns', 'dmitry', 'spiderfoot']

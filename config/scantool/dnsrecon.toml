@@ -1,0 +1,20 @@
+[ScriptInfo]
+script_id = 'dnsrecon'  # ASADT module identifier.
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+# Allow this tool to run. Also accepts the older strings 'True' and 'False'.
+dnsrecon_enable = true
+
+[Defaults]
+# Defaults for GUI and terminal runs. The form can override these for one run.
+scan_mode = 'Standard' # Standard, Service records, or Certificate authority records.
+use_tcp = false        # Send DNS queries over TCP (--tcp).
+dns_server = ''        # Empty uses DNSRecon's resolver selection. Example: '192.0.2.1,192.0.2.2'.
+report_format = 'JSON' # JSON, CSV or XML. Sets the report extension.
+lifetime_seconds = 0   # 0–3600 whole seconds per DNS query (--lifetime). Zero uses the tool default. Example: 5.
+threads = 0            # 0–256 workers for Standard and Service records modes (--threads). Zero uses the tool default. Example: 8.
+
+[ScriptOutput]
+# Filename inside the selected directory. The selected format supplies or replaces the .json, .csv or .xml extension.
+dnsrecon_default_output_filename = 'dnsrecon.json'

@@ -1,0 +1,17 @@
+[ScriptInfo]
+script_id = 'dmitry'
+script_version = '4.0.1'  # ASADT release providing this wrapper.
+
+[ScriptEnablers]
+dmitry_enable = true
+
+[Defaults]
+host = '' # Hostname or IPv4 address.
+lookup = 'Domain WHOIS' # Domain WHOIS or IP WHOIS.
+subdomains = false # Include subdomain discovery.
+emails = false # Include email discovery.
+port_scan = false # Include a TCP port scan.
+
+[ScriptOutput]
+# Filename inside the selected output directory.
+dmitry_default_output_filename = 'dmitry.txt'
